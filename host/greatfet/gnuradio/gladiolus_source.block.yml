@@ -1,0 +1,36 @@
+id: gladiolus_source
+label: 'Gladiolus Source'
+category: '[SDIR]'
+flags: throttle
+
+parameters:
+- id: sample_rate
+  label: 'Sample Rate (sps)'
+  dtype: real
+  default: samp_rate
+
+
+- id: coupling
+  label: 'Input Coupling'
+  dtype: enum
+  options: ['False', 'True']
+  option_labels: ['AC Coupled', 'DC Coupled']
+
+
+- id: gain
+  label: 'Gain (dB)'
+  dtype: int
+  default: 0
+  max: 50
+
+
+templates:
+  imports: from greatfet.gnuradio import gladiolus
+  make: gladiolus.GladiolusSource(${sample_rate}, ${gain}, ${coupling})
+
+outputs:
+- domain: stream
+  dtype: float
+  multiplicity: 1
+
+file_format: 1

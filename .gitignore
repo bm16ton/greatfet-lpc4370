@@ -1,0 +1,63 @@
+# Compiled output
+*.bin
+*.d
+*.elf
+*.hex
+*.srec
+*.dfu
+host/build/
+
+# CMakeInternals
+CMakeFiles
+CMakeCache.txt
+
+# Compiled python files
+__pycache__/
+*.py[cod]
+*$py.class
+host/GreatFET.egg-info
+host/dist
+
+# Operating system spew
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor junk
+*.swp
+*.sublime-project
+*.sublime-workspace
+.vscode
+.idea
+
+# ctags output
+tags
+
+firmware/build
+firmware/*/build
+firmware/cmake-build-debug
+libgreat/host/build/
+libgreat/host/dist/
+*.egg-info
+
+# ccls output
+.ccls-cache
+.ccls
+compile_commands.json
+
+# files involved in generating a release
+VERSION
+dist
+host-packages
+host/.eggs
+release-files
+deploy-files
+firmware-bin
+*.tar.xz
+*.zip
+
+# Never include unencrypted deploy keys.
+id_deploy
+id_deploy.pub
